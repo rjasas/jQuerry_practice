@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* background-color: grey; */
+    font-family: 'Archivo', sans-serif;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+}
+
+#section1{
+    background-color: #4c061d;
+}
+
+#section2 {
+    background-color: #d17a22;
+}
