@@ -17,14 +17,38 @@
 <!-- Pasislepiantis meniu su dropdown -->
 <div class="navbar">
     <ul class="menuItems">
-        <li><a href="#">Pagrindinis</a></li>
-        <li><a href="#">Apie mus</a></li>
-        <li><a href="#">Faktai</a></li>
-        <li><a id="toSection2" href="#section2">Forma</a></li>
+        <li id="menuMain"><a href="#">Pagrindinis</a>
+            <ul id="Main" class="dropdown">
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+            </ul>
+        </li>
+        <li id="aboutMenu"><a href="#">Apie mus</a>
+            <ul id="about" class="dropdown">
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+            </ul>
+        </li>
+        <li id="contactMenu"><a href="#">Faktai</a>
+            <ul id="contacts" class="dropdown">
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+            </ul>
+        </li>
+        <li id="formMenu"><a id="toSection2" href="#section2">Forma</a>
+            <ul id="formMe" class="dropdown">
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+            </ul>
+        </li>
     </ul>
-    <div class="button">
+        <div class="button">
         <i id="arrow" class="fas fa-arrow-up"></i>
-    </div>
+        </div>
 </div>
 <!-- Paragrafai, kurie atsiranda scrollinant -->
     <div class="container">
@@ -55,12 +79,17 @@
             <input type="email" name="email">
             <input type="submit" id="submit" value="Įvesti">
         </form>
-<!-- Duomenu listas -->
+        <div class="buttonsContainer">
+            <!-- Duomenu listas -->
+                <ol id="list">
 
-<!-- Mygtukas valyti lista -->
-
-<!-- Mygtukas trinti duomenis -->
-
+                </ol>
+            <!-- Mygtukas valyti lista -->
+                <button id="clearList">Valyti sąrašą</button>
+                <button id="showArray">Rodyti sąrašą</button>
+            <!-- Mygtukas trinti duomenis -->
+                <button id="clearArray">Ištrinti duomenis</button>
+        </div>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

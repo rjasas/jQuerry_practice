@@ -45,10 +45,66 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     const data = [];
+    //duomenu ivedimas
     $("#submit").click(function(e){
         e.preventDefault();
         let firstName = $("input[name=firstName]").val();
         let email = $("input[name=email]").val();
-        console.log(firstName + email)
+        if(!firstName || !email){
+            return alert("Suveskite duomenis");
+        }
+        // console.log(firstName+", " + email)
+        let user = firstName + ", " + email;
+        // console.log(user)
+        data.push(user);
+        $("input[name=firstName]").val("");
+        $("input[name=email]").val("");
+        // console.log(data)
+        $("#list").empty();
+        for(let i = 0; i<data.length; i++){
+            $("#list").append("<li>"+data[i]+"</li>");
+        }
+       
+        // $("#list").append("<li>"+data[data.length-1]+"</li>")
+    });
+    //duomenu slepimas/rodymas
+    $("#clearList").click(function(){
+        $("#list").empty();
+    });
+    $("#showArray").click(function(){
+        if(data.length==0){
+            alert("Duomenu nera")
+        }
+        $("#list").empty();
+        for(let i = 0; i<data.length; i++){
+            $("#list").append("<li>"+data[i]+"</li>");
+        }
+    })
+
+    //duomenu istrynimas
+
+    $("#clearArray").click(function(){
+        alert("Duomenys bus istrinti!")
+        data.splice(0, data.length);
+        $("#list").empty();
     })
 });
+
+//dropdown
+
+$(document).ready(function(){
+    $("#menuMain").hover(function(){
+        $("#Main").toggleClass("show")
+    });
+    $("#aboutMenu").hover(function(){
+        $("#about").toggleClass("show")
+    });
+    $("#contactMenu").hover(function(){
+        $("#contacts").toggleClass("show")
+    });
+    $("#formMenu").hover(function(){
+        $("#formMe").toggleClass("show")
+    });
+});
+
+
